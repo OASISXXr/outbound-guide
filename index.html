@@ -7,28 +7,30 @@
     <meta name="description" content="最全面的 Outbound (拾光旅人) 游戏攻略。包含最新合成表、新手入门指南、配置要求及联机教程。">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f9fafb; }
+        body { font-family: 'Inter', sans-serif; background-color: #f9fafb; scroll-behavior: smooth; }
         .hero-bg { 
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2681030/ss_c43741ddc5853e68dd4486a86e8dd0b03f475fe9.1920x1080.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2681030/ss_c43741ddc5853e68dd4486a86e8dd0b03f475fe9.1920x1080.jpg');
             background-size: cover;
             background-position: center;
         }
+        .feature-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
     </style>
 </head>
 <body>
 
     <!-- 导航栏 -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex h-16 justify-between items-center">
-                <div class="flex-shrink-0 flex items-center font-bold text-xl text-blue-600">
+                <div class="flex-shrink-0 flex items-center font-bold text-2xl text-blue-600 tracking-tight">
                     Outbound Guide
                 </div>
-                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-                    <a href="#intro" class="text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-blue-500">简介</a>
-                    <a href="#system" class="text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-blue-500">配置</a>
-                    <a href="#beginner" class="text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-blue-500">新手指南</a>
-                    <a href="#crafting" class="text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-blue-500 text-blue-600 font-semibold">合成表(明日更新)</a>
+                <div class="hidden md:ml-6 md:flex md:space-x-8">
+                    <a href="#features" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">核心机制</a>
+                    <a href="#beginner" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">新手指南</a>
+                    <a href="#system" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">配置要求</a>
+                    <a href="#faq" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">常见问题</a>
+                    <a href="#crafting" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-blue-700 transition">合成表(明日更新)</a>
                 </div>
             </div>
         </div>
@@ -36,106 +38,172 @@
 
     <!-- Hero 区域 -->
     <div class="hero-bg text-white py-32 px-4 text-center">
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">Outbound (拾光旅人) 攻略站</h1>
-        <p class="text-xl md:text-2xl mb-8 opacity-95 drop-shadow-md">开启你的房车旅行，打造属于你的移动之家</p>
-        <div class="flex justify-center space-x-4">
-            <span class="bg-yellow-400 text-gray-900 px-6 py-3 rounded-full font-bold text-lg shadow-lg">5月11日 正式发售</span>
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 drop-shadow-2xl">Outbound (拾光旅人)</h1>
+            <p class="text-2xl md:text-3xl mb-10 font-light opacity-95">在末世乌托邦，开启你的房车自动化生存之旅</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <span class="bg-yellow-400 text-gray-900 px-8 py-3 rounded-full font-black text-xl shadow-2xl animate-pulse">5月11日 全球首发</span>
+                <a href="#beginner" class="bg-white text-blue-600 px-8 py-3 rounded-full font-bold text-xl hover:bg-gray-100 transition shadow-xl">立即查看开荒攻略</a>
+            </div>
         </div>
     </div>
 
     <!-- 核心板块 -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-32">
         
-        <!-- 游戏简介 -->
-        <section id="intro" class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="order-2 md:order-1">
-                <h2 class="text-3xl font-bold mb-4 text-gray-900">关于 Outbound</h2>
-                <p class="text-gray-600 leading-relaxed text-lg mb-6">
-                    《Outbound》是一款背景设定在近未来、以舒适房车为主题的开放世界生存游戏。你将从一辆空荡荡的房车开始，逐步将其打造成你的梦想家园。
-                    你可以利用太阳能发电，建立自动化生产线，并在不断变化的世界中探索。
-                </p>
-                <div class="flex space-x-4">
-                    <div class="flex items-center text-sm text-gray-500"><svg class="w-5 h-5 mr-1 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> 开放世界探索</div>
-                    <div class="flex items-center text-sm text-gray-500"><svg class="w-5 h-5 mr-1 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> 1-4人联机合作</div>
-                </div>
+        <!-- 游戏特色 -->
+        <section id="features">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">为什么这款游戏值得期待？</h2>
+                <div class="h-1 w-20 bg-blue-600 mx-auto"></div>
             </div>
-            <div class="order-1 md:order-2">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2681030/ad4b338cd2f3331f93007f7b5d29db7da974337d/ss_ad4b338cd2f3331f93007f7b5d29db7da974337d.1920x1080.jpg" alt="Outbound Gameplay" class="rounded-2xl shadow-xl hover:scale-[1.02] transition-transform">
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg border border-gray-50">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6 text-yellow-600">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">能源自动化</h3>
+                    <p class="text-gray-600 leading-relaxed">利用太阳能、风能和水能为你的房车供电。建立自动化生产线，让机器为你采集资源和制造物品。</p>
+                </div>
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg border border-gray-50">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6 text-blue-600">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">移动家园自定义</h3>
+                    <p class="text-gray-600 leading-relaxed">从空空如也的房车到多层移动堡垒。自由设计内部布局、家具装饰和功能模块，随时随地安家。</p>
+                </div>
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg border border-gray-50">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6 text-green-600">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">多人联机合作</h3>
+                    <p class="text-gray-600 leading-relaxed">支持 1-4 人在线联机。和好友分工合作：有人负责驾驶，有人负责采集，有人负责房车建设和防御。</p>
+                </div>
             </div>
         </section>
 
-        <!-- 游戏截图展示 -->
-        <section>
-            <h2 class="text-3xl font-bold mb-8 text-gray-900">精美画面</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2681030/98467c8bbedfc9575009f7fe47e5d413c2fb1959/ss_98467c8bbedfc9575009f7fe47e5d413c2fb1959.1920x1080.jpg" class="rounded-xl shadow-md h-48 w-full object-cover">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2681030/2a511a8ea7917122912d7299e3a022c805c0150f/ss_2a511a8ea7917122912d7299e3a022c805c0150f.1920x1080.jpg" class="rounded-xl shadow-md h-48 w-full object-cover">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2681030/74f08428d852bc8a8bdfe88fdfc2a66c9efc8f02/ss_74f08428d852bc8a8bdfe88fdfc2a66c9efc8f02.1920x1080.jpg" class="rounded-xl shadow-md h-48 w-full object-cover">
+        <!-- 游戏截图画廊 -->
+        <section class="space-y-8">
+            <h2 class="text-3xl font-bold text-gray-900 pl-4 border-l-8 border-blue-600">实机画面展示</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="overflow-hidden rounded-2xl shadow-xl">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2681030/ss_ad4b338cd2f3331f93007f7b5d29db7da974337d.1920x1080.jpg" alt="Outbound Gameplay 1" class="hover:scale-105 transition duration-500">
+                </div>
+                <div class="grid grid-rows-2 gap-8">
+                    <div class="overflow-hidden rounded-2xl shadow-xl">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2681030/ss_98467c8bbedfc9575009f7fe47e5d413c2fb1959.1920x1080.jpg" alt="Outbound Gameplay 2" class="hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="overflow-hidden rounded-2xl shadow-xl">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2681030/ss_2a511a8ea7917122912d7299e3a022c805c0150f.1920x1080.jpg" alt="Outbound Gameplay 3" class="hover:scale-105 transition duration-500">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 官方动态与获奖 -->
+        <section class="bg-blue-600 rounded-3xl p-12 text-white">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="inline-block bg-white text-blue-600 px-3 py-1 rounded text-sm font-bold mb-4 uppercase">News Update</span>
+                    <h2 class="text-4xl font-bold mb-6">Gamescom 社区选择奖得主</h2>
+                    <p class="text-xl opacity-90 mb-8 leading-relaxed">
+                        Square Glade Games 凭借《Outbound》在科隆游戏展上大放异彩。作为《Above Snakes》开发团队的新作，本作在 Kickstarter 筹集了超过 100 万美元，是 2026 年最受关注的独立生存游戏。
+                    </p>
+                </div>
+                <div class="bg-blue-500 p-8 rounded-2xl border border-blue-400">
+                    <h4 class="font-bold text-2xl mb-4">🔥 为什么开发者值得信任？</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start"><span class="mr-2 text-yellow-300">★</span> 前作《Above Snakes》在 Steam 获得特别好评</li>
+                        <li class="flex items-start"><span class="mr-2 text-yellow-300">★</span> 极其透明的开发文档和社区互动</li>
+                        <li class="flex items-start"><span class="mr-2 text-yellow-300">★</span> 针对 Steam Deck 进行了深度优化</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <!-- 配置要求 -->
-        <section id="system" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-            <h2 class="text-3xl font-bold mb-8 text-center text-gray-900">PC 系统要求</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="space-y-4">
-                    <h3 class="font-bold text-xl border-l-4 border-green-500 pl-3">最低配置</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li><strong>OS:</strong> Windows 10/11 (64-bit)</li>
-                        <li><strong>处理器:</strong> Intel Core i5-4590</li>
-                        <li><strong>内存:</strong> 8 GB RAM</li>
-                        <li><strong>显卡:</strong> GTX 1050 / RX 560</li>
-                        <li><strong>存储:</strong> 10 GB 可用空间</li>
+        <section id="system" class="bg-white p-12 rounded-3xl shadow-xl border border-gray-100">
+            <h2 class="text-4xl font-bold mb-12 text-center text-gray-900">PC 系统配置要求</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-gray-50 p-8 rounded-2xl">
+                    <h3 class="font-bold text-2xl mb-6 text-green-600 flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        最低配置
+                    </h3>
+                    <ul class="text-gray-700 space-y-4 text-lg">
+                        <li class="flex justify-between border-b pb-2"><span>操作系统</span> <span class="font-medium text-gray-900">Windows 10/11 (64-bit)</span></li>
+                        <li class="flex justify-between border-b pb-2"><span>处理器</span> <span class="font-medium text-gray-900">Intel i5-4590 / FX 8350</span></li>
+                        <li class="flex justify-between border-b pb-2"><span>内存</span> <span class="font-medium text-gray-900">8 GB RAM</span></li>
+                        <li class="flex justify-between border-b pb-2"><span>显卡</span> <span class="font-medium text-gray-900">GTX 1050 / RX 560 (2GB)</span></li>
+                        <li class="flex justify-between"><span>存储</span> <span class="font-medium text-gray-900">10 GB 可用空间</span></li>
                     </ul>
                 </div>
-                <div class="space-y-4">
-                    <h3 class="font-bold text-xl border-l-4 border-blue-500 pl-3">推荐配置</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li><strong>OS:</strong> Windows 10/11 (64-bit)</li>
-                        <li><strong>处理器:</strong> Intel Core i7-8700K</li>
-                        <li><strong>内存:</strong> 16 GB RAM</li>
-                        <li><strong>显卡:</strong> RTX 2060 / RX 5700</li>
+                <div class="bg-blue-50 p-8 rounded-2xl">
+                    <h3 class="font-bold text-2xl mb-6 text-blue-600 flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z"></path></svg>
+                        推荐配置
+                    </h3>
+                    <ul class="text-gray-700 space-y-4 text-lg">
+                        <li class="flex justify-between border-b pb-2"><span>操作系统</span> <span class="font-medium text-gray-900">Windows 10/11 (64-bit)</span></li>
+                        <li class="flex justify-between border-b pb-2"><span>处理器</span> <span class="font-medium text-gray-900">Intel i7-8700K / Ryzen 3600</span></li>
+                        <li class="flex justify-between border-b pb-2"><span>内存</span> <span class="font-medium text-gray-900">16 GB RAM</span></li>
+                        <li class="flex justify-between border-b pb-2"><span>显卡</span> <span class="font-medium text-gray-900">RTX 2060 / RX 5700 (6GB)</span></li>
+                        <li class="flex justify-between"><span>DirectX</span> <span class="font-medium text-gray-900">版本 12</span></li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- 新手必看 -->
-        <section id="beginner">
-            <h2 class="text-3xl font-bold mb-8 text-gray-900">新手入门指南</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-blue-50 p-6 rounded-xl">
-                    <h4 class="font-bold text-lg mb-2">⚡ 能源管理</h4>
-                    <p class="text-gray-600">优先安装车顶太阳能电池板，这是你所有设备的动力来源。</p>
+        <!-- 常见问题 FAQ -->
+        <section id="faq" class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center text-gray-900">玩家常见问题解答 (FAQ)</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <h4 class="font-bold text-xl mb-2 text-blue-600">Q: 游戏有中文吗？</h4>
+                    <p class="text-gray-600">A: 是的，官方已经确认首发即支持 **简体中文** 和 **繁体中文**，UI及全部文本均已本地化。</p>
                 </div>
-                <div class="bg-green-50 p-6 rounded-xl">
-                    <h4 class="font-bold text-lg mb-2">🛠️ 资源采集</h4>
-                    <p class="text-gray-600">砍伐树木和采集矿石，利用初始工作台制作基础建材。</p>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <h4 class="font-bold text-xl mb-2 text-blue-600">Q: 支持跨平台联机吗？</h4>
+                    <p class="text-gray-600">A: 目前确认支持 Steam 玩家之间的联机。主机端（PS5/Xbox）版本预计在半年后发布，届时会更新跨平台详情。</p>
                 </div>
-                <div class="bg-purple-50 p-6 rounded-xl">
-                    <h4 class="font-bold text-lg mb-2">🚐 扩建策略</h4>
-                    <p class="text-gray-600">房车内部空间有限，合理布局储物柜可以极大提高效率。</p>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <h4 class="font-bold text-xl mb-2 text-blue-600">Q: 游戏可以离线玩吗？</h4>
+                    <p class="text-gray-600">A: 可以。虽然联机是核心玩法之一，但游戏完全支持单人离线模式。</p>
                 </div>
             </div>
         </section>
 
         <!-- 敬请期待 -->
-        <section id="crafting" class="text-center py-20 bg-gray-900 text-white rounded-3xl relative overflow-hidden">
-            <div class="absolute inset-0 opacity-20 bg-[url('https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2681030/505cb03cf258bd81017eaf2434da5d0603c44551/ss_505cb03cf258bd81017eaf2434da5d0603c44551.1920x1080.jpg')] bg-cover bg-center"></div>
-            <div class="relative z-10">
-                <h2 class="text-3xl font-bold mb-4">全面合成表 & 物品清单</h2>
-                <p class="text-gray-400 mb-8 max-w-2xl mx-auto">我们正在实时抓取游戏数据。首发版本将包含超过 200 种物品的合成公式、获取路径及最优利用策略。</p>
-                <div class="inline-block bg-blue-600 px-8 py-3 rounded-lg font-bold">5月11日 15:00 同步更新</div>
+        <section id="crafting" class="text-center py-24 bg-gray-900 text-white rounded-[3rem] relative overflow-hidden">
+            <div class="absolute inset-0 opacity-15 bg-[url('https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2681030/ss_505cb03cf258bd81017eaf2434da5d0603c44551.1920x1080.jpg')] bg-cover bg-center"></div>
+            <div class="relative z-10 max-w-3xl mx-auto px-4">
+                <h2 class="text-4xl md:text-5xl font-black mb-6">全网首发！实时合成表</h2>
+                <p class="text-xl text-gray-400 mb-10 leading-relaxed">
+                    我们正在整理从 Demo 到 Full Release 的 500+ 物品数据。包含：能源组件、自动化工作站、房车外部组件及珍惜食材合成公式。
+                </p>
+                <div class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl font-black text-2xl transition shadow-2xl">
+                    5月11日 14:00 准时解锁
+                </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-gray-50 border-t border-gray-200 py-12 mt-12">
-        <div class="max-w-7xl mx-auto px-4 text-center text-gray-500">
-            <p class="mb-2 font-semibold">Outbound Guide - 最专业的拾光旅人玩家社区</p>
-            <p>&copy; 2026 OutboundGuide.org - 非官方攻略社区</p>
-            <p class="mt-4 text-xs text-gray-400">Outbound 是 Square Glade Games 的注册商标。本站所有图片素材归原作者所有，仅供学习交流使用。</p>
+    <footer class="bg-gray-100 border-t border-gray-200 py-16 mt-20">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 text-gray-500">
+            <div>
+                <h4 class="text-gray-900 font-bold text-xl mb-4">Outbound Guide</h4>
+                <p class="max-w-md">致力于为全球 Outbound 玩家提供最快、最准、最全的房车生存攻略。我们的目标是帮助每一位旅人打造属于自己的乌托邦。</p>
+            </div>
+            <div class="md:text-right">
+                <p class="font-semibold text-gray-900 mb-2">&copy; 2026 OutboundGuide.org - 非官方攻略社区</p>
+                <p class="text-sm">Outbound 是 Square Glade Games 的注册商标。本站所有图片素材归原作者所有。</p>
+                <div class="mt-6 flex md:justify-end space-x-6 text-sm">
+                    <a href="#" class="hover:text-blue-600">隐私条款</a>
+                    <a href="#" class="hover:text-blue-600">免责声明</a>
+                    <a href="mailto:contact@outboundguide.org" class="hover:text-blue-600">联系我们</a>
+                </div>
+            </div>
         </div>
     </footer>
 
