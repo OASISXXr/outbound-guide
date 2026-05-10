@@ -1,60 +1,81 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outbound Guide | 拾光旅人完全攻略指南 - Crafting, Tips & Wiki</title>
-    <meta name="description" content="最全面的 Outbound (拾光旅人) 游戏攻略。包含最新合成表、新手入门指南、配置要求及联机教程。">
+    <title>Outbound Guide | Wiki, Crafting & Walkthrough (English/中文)</title>
+    <meta name="description" content="The ultimate guide for Outbound. Crafting recipes, starter tips, system requirements, and multiplayer guides for the camper van survival game.">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f9fafb; scroll-behavior: smooth; }
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background-color: #f9fafb; scroll-behavior: smooth; }
         .hero-bg { 
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2681030/ss_c43741ddc5853e68dd4486a86e8dd0b03f475fe9.1920x1080.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://cdn.cloudflare.steamstatic.com/steam/apps/2681030/ss_c43741ddc5853e68dd4486a86e8dd0b03f475fe9.1920x1080.jpg');
             background-size: cover;
             background-position: center;
         }
+        .lang-zh .en { display: none; }
+        .lang-en .zh { display: none; }
         .feature-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
     </style>
 </head>
-<body>
+<body class="lang-en" id="bodyTag">
 
-    <!-- 导航栏 -->
+    <!-- Navigation -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex h-16 justify-between items-center">
                 <div class="flex-shrink-0 flex items-center font-bold text-2xl text-blue-600 tracking-tight">
                     Outbound Guide
                 </div>
-                <div class="hidden md:ml-6 md:flex md:space-x-8">
-                    <a href="#features" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">核心机制</a>
-                    <a href="#beginner" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">新手指南</a>
-                    <a href="#system" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">配置要求</a>
-                    <a href="#faq" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">常见问题</a>
-                    <a href="#crafting" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-blue-700 transition">合成表(明日更新)</a>
+                <div class="hidden md:ml-6 md:flex md:space-x-8 items-center">
+                    <a href="#features" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium"><span class="en">Features</span><span class="zh">核心机制</span></a>
+                    <a href="#beginner" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium"><span class="en">Guides</span><span class="zh">攻略</span></a>
+                    <a href="#faq" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium"><span class="en">FAQ</span><span class="zh">问答</span></a>
+                    
+                    <!-- Language Switcher -->
+                    <div class="flex bg-gray-100 p-1 rounded-lg ml-4">
+                        <button onclick="setLang('en')" id="btn-en" class="px-3 py-1 rounded-md text-sm font-bold bg-white shadow-sm text-blue-600">EN</button>
+                        <button onclick="setLang('zh')" id="btn-zh" class="px-3 py-1 rounded-md text-sm font-bold text-gray-500 hover:text-blue-600">中文</button>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero 区域 -->
+    <!-- Hero Section -->
     <div class="hero-bg text-white py-32 px-4 text-center">
         <div class="max-w-4xl mx-auto">
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 drop-shadow-2xl">Outbound (拾光旅人)</h1>
-            <p class="text-2xl md:text-3xl mb-10 font-light opacity-95">在末世乌托邦，开启你的房车自动化生存之旅</p>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 drop-shadow-2xl">
+                <span class="en text-white">Outbound Wiki</span>
+                <span class="zh text-white">Outbound (拾光旅人) 攻略站</span>
+            </h1>
+            <p class="text-2xl md:text-3xl mb-10 font-light opacity-95 drop-shadow-md">
+                <span class="en">The Ultimate Survival Guide for Your Mobile Home</span>
+                <span class="zh">在末世乌托邦，开启你的房车自动化生存之旅</span>
+            </p>
             <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <span class="bg-yellow-400 text-gray-900 px-8 py-3 rounded-full font-black text-xl shadow-2xl animate-pulse">5月11日 全球首发</span>
-                <a href="#beginner" class="bg-white text-blue-600 px-8 py-3 rounded-full font-bold text-xl hover:bg-gray-100 transition shadow-xl">立即查看开荒攻略</a>
+                <span class="bg-yellow-400 text-gray-900 px-8 py-3 rounded-full font-black text-xl shadow-2xl">
+                    <span class="en">Launching May 11</span>
+                    <span class="zh">5月11日 全球首发</span>
+                </span>
+                <a href="#beginner" class="bg-white text-blue-600 px-8 py-3 rounded-full font-bold text-xl hover:bg-gray-100 transition shadow-xl">
+                    <span class="en">Read Starter Guide</span>
+                    <span class="zh">立即查看开荒攻略</span>
+                </a>
             </div>
         </div>
     </div>
 
-    <!-- 核心板块 -->
+    <!-- Main Content -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-32">
         
-        <!-- 游戏特色 -->
+        <!-- Game Features -->
         <section id="features">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">为什么这款游戏值得期待？</h2>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    <span class="en">Key Game Mechanics</span>
+                    <span class="zh">为什么这款游戏值得期待？</span>
+                </h2>
                 <div class="h-1 w-20 bg-blue-600 mx-auto"></div>
             </div>
             <div class="grid md:grid-cols-3 gap-10">
@@ -62,150 +83,161 @@
                     <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6 text-yellow-600">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">能源自动化</h3>
-                    <p class="text-gray-600 leading-relaxed">利用太阳能、风能和水能为你的房车供电。建立自动化生产线，让机器为你采集资源和制造物品。</p>
+                    <h3 class="text-2xl font-bold mb-4"><span class="en">Energy Automation</span><span class="zh">能源自动化</span></h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        <span class="en">Power your van using solar, wind, and water. Build automated lines for resource gathering and production.</span>
+                        <span class="zh">利用太阳能、风能和水能为你的房车供电。建立自动化生产线，让机器为你采集资源和制造物品。</span>
+                    </p>
                 </div>
                 <div class="feature-card bg-white p-8 rounded-2xl shadow-lg border border-gray-50">
                     <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6 text-blue-600">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">移动家园自定义</h3>
-                    <p class="text-gray-600 leading-relaxed">从空空如也的房车到多层移动堡垒。自由设计内部布局、家具装饰和功能模块，随时随地安家。</p>
+                    <h3 class="text-2xl font-bold mb-4"><span class="en">Van Customization</span><span class="zh">移动家园自定义</span></h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        <span class="en">Transform an empty van into a multi-story fortress. Design layouts, furniture, and functional modules.</span>
+                        <span class="zh">从空空如也的房车到多层移动堡垒。自由设计内部布局、家具装饰和功能模块，随时随地安家。</span>
+                    </p>
                 </div>
                 <div class="feature-card bg-white p-8 rounded-2xl shadow-lg border border-gray-50">
                     <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6 text-green-600">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">多人联机合作</h3>
-                    <p class="text-gray-600 leading-relaxed">支持 1-4 人在线联机。和好友分工合作：有人负责驾驶，有人负责采集，有人负责房车建设和防御。</p>
+                    <h3 class="text-2xl font-bold mb-4"><span class="en">4-Player Co-op</span><span class="zh">多人联机合作</span></h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        <span class="en">Support for 1-4 players. Coordinate tasks: driving, scavenging, building, and defense.</span>
+                        <span class="zh">支持 1-4 人在线联机。和好友分工合作：有人负责驾驶，有人负责采集，有人负责房车建设和防御。</span>
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- 游戏截图画廊 -->
+        <!-- Gallery -->
         <section class="space-y-8">
-            <h2 class="text-3xl font-bold text-gray-900 pl-4 border-l-8 border-blue-600">实机画面展示</h2>
+            <h2 class="text-3xl font-bold text-gray-900 pl-4 border-l-8 border-blue-600">
+                <span class="en">Gameplay Screenshots</span>
+                <span class="zh">实机画面展示</span>
+            </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="overflow-hidden rounded-2xl shadow-xl">
-                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2681030/ss_ad4b338cd2f3331f93007f7b5d29db7da974337d.1920x1080.jpg" alt="Outbound Gameplay 1" class="hover:scale-105 transition duration-500">
+                    <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2681030/ss_ad4b338cd2f3331f93007f7b5d29db7da974337d.1920x1080.jpg" alt="Outbound Gameplay 1" class="hover:scale-105 transition duration-500 w-full">
                 </div>
                 <div class="grid grid-rows-2 gap-8">
                     <div class="overflow-hidden rounded-2xl shadow-xl">
-                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2681030/ss_98467c8bbedfc9575009f7fe47e5d413c2fb1959.1920x1080.jpg" alt="Outbound Gameplay 2" class="hover:scale-105 transition duration-500">
+                        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2681030/ss_98467c8bbedfc9575009f7fe47e5d413c2fb1959.1920x1080.jpg" alt="Outbound Gameplay 2" class="hover:scale-105 transition duration-500 w-full h-full object-cover">
                     </div>
                     <div class="overflow-hidden rounded-2xl shadow-xl">
-                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2681030/ss_2a511a8ea7917122912d7299e3a022c805c0150f.1920x1080.jpg" alt="Outbound Gameplay 3" class="hover:scale-105 transition duration-500">
+                        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2681030/ss_2a511a8ea7917122912d7299e3a022c805c0150f.1920x1080.jpg" alt="Outbound Gameplay 3" class="hover:scale-105 transition duration-500 w-full h-full object-cover">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 官方动态与获奖 -->
-        <section class="bg-blue-600 rounded-3xl p-12 text-white">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <span class="inline-block bg-white text-blue-600 px-3 py-1 rounded text-sm font-bold mb-4 uppercase">News Update</span>
-                    <h2 class="text-4xl font-bold mb-6">Gamescom 社区选择奖得主</h2>
-                    <p class="text-xl opacity-90 mb-8 leading-relaxed">
-                        Square Glade Games 凭借《Outbound》在科隆游戏展上大放异彩。作为《Above Snakes》开发团队的新作，本作在 Kickstarter 筹集了超过 100 万美元，是 2026 年最受关注的独立生存游戏。
-                    </p>
-                </div>
-                <div class="bg-blue-500 p-8 rounded-2xl border border-blue-400">
-                    <h4 class="font-bold text-2xl mb-4">🔥 为什么开发者值得信任？</h4>
-                    <ul class="space-y-4">
-                        <li class="flex items-start"><span class="mr-2 text-yellow-300">★</span> 前作《Above Snakes》在 Steam 获得特别好评</li>
-                        <li class="flex items-start"><span class="mr-2 text-yellow-300">★</span> 极其透明的开发文档和社区互动</li>
-                        <li class="flex items-start"><span class="mr-2 text-yellow-300">★</span> 针对 Steam Deck 进行了深度优化</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- 配置要求 -->
+        <!-- System Requirements -->
         <section id="system" class="bg-white p-12 rounded-3xl shadow-xl border border-gray-100">
-            <h2 class="text-4xl font-bold mb-12 text-center text-gray-900">PC 系统配置要求</h2>
+            <h2 class="text-4xl font-bold mb-12 text-center text-gray-900">
+                <span class="en">PC System Requirements</span>
+                <span class="zh">PC 系统配置要求</span>
+            </h2>
             <div class="grid md:grid-cols-2 gap-12">
                 <div class="bg-gray-50 p-8 rounded-2xl">
                     <h3 class="font-bold text-2xl mb-6 text-green-600 flex items-center">
-                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        最低配置
+                        Minimum
                     </h3>
                     <ul class="text-gray-700 space-y-4 text-lg">
-                        <li class="flex justify-between border-b pb-2"><span>操作系统</span> <span class="font-medium text-gray-900">Windows 10/11 (64-bit)</span></li>
-                        <li class="flex justify-between border-b pb-2"><span>处理器</span> <span class="font-medium text-gray-900">Intel i5-4590 / FX 8350</span></li>
-                        <li class="flex justify-between border-b pb-2"><span>内存</span> <span class="font-medium text-gray-900">8 GB RAM</span></li>
-                        <li class="flex justify-between border-b pb-2"><span>显卡</span> <span class="font-medium text-gray-900">GTX 1050 / RX 560 (2GB)</span></li>
-                        <li class="flex justify-between"><span>存储</span> <span class="font-medium text-gray-900">10 GB 可用空间</span></li>
+                        <li class="flex justify-between border-b pb-2"><span>OS</span> <span class="font-medium text-gray-900">Win 10/11 (64-bit)</span></li>
+                        <li class="flex justify-between border-b pb-2"><span>CPU</span> <span class="font-medium text-gray-900">i5-4590 / FX 8350</span></li>
+                        <li class="flex justify-between border-b pb-2"><span>RAM</span> <span class="font-medium text-gray-900">8 GB</span></li>
+                        <li class="flex justify-between border-b pb-2"><span>GPU</span> <span class="font-medium text-gray-900">GTX 1050 / RX 560</span></li>
                     </ul>
                 </div>
                 <div class="bg-blue-50 p-8 rounded-2xl">
                     <h3 class="font-bold text-2xl mb-6 text-blue-600 flex items-center">
-                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z"></path></svg>
-                        推荐配置
+                        Recommended
                     </h3>
                     <ul class="text-gray-700 space-y-4 text-lg">
-                        <li class="flex justify-between border-b pb-2"><span>操作系统</span> <span class="font-medium text-gray-900">Windows 10/11 (64-bit)</span></li>
-                        <li class="flex justify-between border-b pb-2"><span>处理器</span> <span class="font-medium text-gray-900">Intel i7-8700K / Ryzen 3600</span></li>
-                        <li class="flex justify-between border-b pb-2"><span>内存</span> <span class="font-medium text-gray-900">16 GB RAM</span></li>
-                        <li class="flex justify-between border-b pb-2"><span>显卡</span> <span class="font-medium text-gray-900">RTX 2060 / RX 5700 (6GB)</span></li>
-                        <li class="flex justify-between"><span>DirectX</span> <span class="font-medium text-gray-900">版本 12</span></li>
+                        <li class="flex justify-between border-b pb-2"><span>OS</span> <span class="font-medium text-gray-900">Win 10/11 (64-bit)</span></li>
+                        <li class="flex justify-between border-b pb-2"><span>CPU</span> <span class="font-medium text-gray-900">i7-8700K / Ryzen 3600</span></li>
+                        <li class="flex justify-between border-b pb-2"><span>RAM</span> <span class="font-medium text-gray-900">16 GB</span></li>
+                        <li class="flex justify-between border-b pb-2"><span>GPU</span> <span class="font-medium text-gray-900">RTX 2060 / RX 5700</span></li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- 常见问题 FAQ -->
+        <!-- FAQ -->
         <section id="faq" class="max-w-4xl mx-auto">
-            <h2 class="text-4xl font-bold mb-12 text-center text-gray-900">玩家常见问题解答 (FAQ)</h2>
+            <h2 class="text-4xl font-bold mb-12 text-center text-gray-900">
+                <span class="en">FAQ</span>
+                <span class="zh">常见问题解答</span>
+            </h2>
             <div class="space-y-6">
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h4 class="font-bold text-xl mb-2 text-blue-600">Q: 游戏有中文吗？</h4>
-                    <p class="text-gray-600">A: 是的，官方已经确认首发即支持 **简体中文** 和 **繁体中文**，UI及全部文本均已本地化。</p>
+                    <h4 class="font-bold text-xl mb-2 text-blue-600">
+                        <span class="en">Languages Supported?</span>
+                        <span class="zh">游戏有中文吗？</span>
+                    </h4>
+                    <p class="text-gray-600">
+                        <span class="en">Yes, the game supports Simplified & Traditional Chinese, English, German, and more.</span>
+                        <span class="zh">是的，官方已经确认支持简体/繁体中文、英文、德语等。</span>
+                    </p>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h4 class="font-bold text-xl mb-2 text-blue-600">Q: 支持跨平台联机吗？</h4>
-                    <p class="text-gray-600">A: 目前确认支持 Steam 玩家之间的联机。主机端（PS5/Xbox）版本预计在半年后发布，届时会更新跨平台详情。</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h4 class="font-bold text-xl mb-2 text-blue-600">Q: 游戏可以离线玩吗？</h4>
-                    <p class="text-gray-600">A: 可以。虽然联机是核心玩法之一，但游戏完全支持单人离线模式。</p>
+                    <h4 class="font-bold text-xl mb-2 text-blue-600">
+                        <span class="en">Is there Multiplayer?</span>
+                        <span class="zh">支持联机吗？</span>
+                    </h4>
+                    <p class="text-gray-600">
+                        <span class="en">Yes, online co-op for up to 4 players is supported at launch.</span>
+                        <span class="zh">支持。首发即支持最多 4 人的在线联机合作。</span>
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- 敬请期待 -->
+        <!-- Coming Soon -->
         <section id="crafting" class="text-center py-24 bg-gray-900 text-white rounded-[3rem] relative overflow-hidden">
-            <div class="absolute inset-0 opacity-15 bg-[url('https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2681030/ss_505cb03cf258bd81017eaf2434da5d0603c44551.1920x1080.jpg')] bg-cover bg-center"></div>
+            <div class="absolute inset-0 opacity-15 bg-[url('https://cdn.cloudflare.steamstatic.com/steam/apps/2681030/ss_505cb03cf258bd81017eaf2434da5d0603c44551.1920x1080.jpg')] bg-cover bg-center"></div>
             <div class="relative z-10 max-w-3xl mx-auto px-4">
-                <h2 class="text-4xl md:text-5xl font-black mb-6">全网首发！实时合成表</h2>
-                <p class="text-xl text-gray-400 mb-10 leading-relaxed">
-                    我们正在整理从 Demo 到 Full Release 的 500+ 物品数据。包含：能源组件、自动化工作站、房车外部组件及珍惜食材合成公式。
+                <h2 class="text-4xl md:text-5xl font-black mb-6 uppercase tracking-widest">
+                    <span class="en">Crafting Database</span>
+                    <span class="zh">实时合成表</span>
+                </h2>
+                <p class="text-xl text-gray-400 mb-10 leading-relaxed italic">
+                    <span class="en">Live data sync starts in...</span>
+                    <span class="zh">数据实时抓取中，距离上线还剩：</span>
                 </p>
                 <div class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl font-black text-2xl transition shadow-2xl">
-                    5月11日 14:00 准时解锁
+                    May 11, 2026 @ 14:00 (UTC+8)
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-gray-100 border-t border-gray-200 py-16 mt-20">
-        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 text-gray-500">
-            <div>
-                <h4 class="text-gray-900 font-bold text-xl mb-4">Outbound Guide</h4>
-                <p class="max-w-md">致力于为全球 Outbound 玩家提供最快、最准、最全的房车生存攻略。我们的目标是帮助每一位旅人打造属于自己的乌托邦。</p>
-            </div>
-            <div class="md:text-right">
-                <p class="font-semibold text-gray-900 mb-2">&copy; 2026 OutboundGuide.org - 非官方攻略社区</p>
-                <p class="text-sm">Outbound 是 Square Glade Games 的注册商标。本站所有图片素材归原作者所有。</p>
-                <div class="mt-6 flex md:justify-end space-x-6 text-sm">
-                    <a href="#" class="hover:text-blue-600">隐私条款</a>
-                    <a href="#" class="hover:text-blue-600">免责声明</a>
-                    <a href="mailto:contact@outboundguide.org" class="hover:text-blue-600">联系我们</a>
-                </div>
-            </div>
+    <footer class="bg-gray-100 border-t border-gray-200 py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center text-gray-500">
+            <p class="mb-2 font-bold text-gray-900">OutboundGuide.org</p>
+            <p>&copy; 2026 Outbound Non-official Wiki. All rights reserved.</p>
         </div>
     </footer>
 
+    <script>
+        function setLang(lang) {
+            const body = document.getElementById('bodyTag');
+            const btnEn = document.getElementById('btn-en');
+            const btnZh = document.getElementById('btn-zh');
+            
+            if (lang === 'zh') {
+                body.className = 'lang-zh';
+                btnZh.className = 'px-3 py-1 rounded-md text-sm font-bold bg-white shadow-sm text-blue-600';
+                btnEn.className = 'px-3 py-1 rounded-md text-sm font-bold text-gray-500 hover:text-blue-600';
+            } else {
+                body.className = 'lang-en';
+                btnEn.className = 'px-3 py-1 rounded-md text-sm font-bold bg-white shadow-sm text-blue-600';
+                btnZh.className = 'px-3 py-1 rounded-md text-sm font-bold text-gray-500 hover:text-blue-600';
+            }
+        }
+    </script>
 </body>
 </html>
