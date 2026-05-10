@@ -8,7 +8,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f9fafb; }
-        .hero-gradient { background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%); }
+        .hero-bg { 
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2681030/ss_c43741ddc5853e68dd4486a86e8dd0b03f475fe9.1920x1080.jpg');
+            background-size: cover;
+            background-position: center;
+        }
     </style>
 </head>
 <body>
@@ -24,35 +28,49 @@
                     <a href="#intro" class="text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-blue-500">简介</a>
                     <a href="#system" class="text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-blue-500">配置</a>
                     <a href="#beginner" class="text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-blue-500">新手指南</a>
-                    <a href="#crafting" class="text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-blue-500">合成表(明日更新)</a>
+                    <a href="#crafting" class="text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-blue-500 text-blue-600 font-semibold">合成表(明日更新)</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero 区域 -->
-    <div class="hero-gradient text-white py-20 px-4 text-center">
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 text-white">Outbound (拾光旅人) 攻略站</h1>
-        <p class="text-xl md:text-2xl mb-8 opacity-90">开启你的房车旅行，打造属于你的移动之家</p>
+    <div class="hero-bg text-white py-32 px-4 text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">Outbound (拾光旅人) 攻略站</h1>
+        <p class="text-xl md:text-2xl mb-8 opacity-95 drop-shadow-md">开启你的房车旅行，打造属于你的移动之家</p>
         <div class="flex justify-center space-x-4">
-            <span class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-bold">5月11日 正式发售</span>
+            <span class="bg-yellow-400 text-gray-900 px-6 py-3 rounded-full font-bold text-lg shadow-lg">5月11日 正式发售</span>
         </div>
     </div>
 
     <!-- 核心板块 -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
         
         <!-- 游戏简介 -->
         <section id="intro" class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+            <div class="order-2 md:order-1">
                 <h2 class="text-3xl font-bold mb-4 text-gray-900">关于 Outbound</h2>
-                <p class="text-gray-600 leading-relaxed text-lg">
+                <p class="text-gray-600 leading-relaxed text-lg mb-6">
                     《Outbound》是一款背景设定在近未来、以舒适房车为主题的开放世界生存游戏。你将从一辆空荡荡的房车开始，逐步将其打造成你的梦想家园。
                     你可以利用太阳能发电，建立自动化生产线，并在不断变化的世界中探索。
                 </p>
+                <div class="flex space-x-4">
+                    <div class="flex items-center text-sm text-gray-500"><svg class="w-5 h-5 mr-1 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> 开放世界探索</div>
+                    <div class="flex items-center text-sm text-gray-500"><svg class="w-5 h-5 mr-1 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> 1-4人联机合作</div>
+                </div>
             </div>
-            <div class="bg-gray-200 rounded-xl h-64 flex items-center justify-center text-gray-400">
-                [ 游戏预告片预览图 ]
+            <div class="order-1 md:order-2">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2681030/ad4b338cd2f3331f93007f7b5d29db7da974337d/ss_ad4b338cd2f3331f93007f7b5d29db7da974337d.1920x1080.jpg" alt="Outbound Gameplay" class="rounded-2xl shadow-xl hover:scale-[1.02] transition-transform">
+            </div>
+        </section>
+
+        <!-- 游戏截图展示 -->
+        <section>
+            <h2 class="text-3xl font-bold mb-8 text-gray-900">精美画面</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2681030/98467c8bbedfc9575009f7fe47e5d413c2fb1959/ss_98467c8bbedfc9575009f7fe47e5d413c2fb1959.1920x1080.jpg" class="rounded-xl shadow-md h-48 w-full object-cover">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2681030/2a511a8ea7917122912d7299e3a022c805c0150f/ss_2a511a8ea7917122912d7299e3a022c805c0150f.1920x1080.jpg" class="rounded-xl shadow-md h-48 w-full object-cover">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2681030/74f08428d852bc8a8bdfe88fdfc2a66c9efc8f02/ss_74f08428d852bc8a8bdfe88fdfc2a66c9efc8f02.1920x1080.jpg" class="rounded-xl shadow-md h-48 w-full object-cover">
             </div>
         </section>
 
@@ -102,20 +120,22 @@
         </section>
 
         <!-- 敬请期待 -->
-        <section id="crafting" class="text-center py-16 bg-gray-900 text-white rounded-3xl">
-            <h2 class="text-3xl font-bold mb-4 text-white">全面合成表 & 物品清单</h2>
-            <p class="text-gray-400 mb-8">正在整理数据中... 游戏发布后 1 小时内同步更新！</p>
-            <div class="inline-block border border-gray-700 px-6 py-3 rounded-lg text-sm italic text-gray-500">
-                最后更新: 2026-05-10
+        <section id="crafting" class="text-center py-20 bg-gray-900 text-white rounded-3xl relative overflow-hidden">
+            <div class="absolute inset-0 opacity-20 bg-[url('https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2681030/505cb03cf258bd81017eaf2434da5d0603c44551/ss_505cb03cf258bd81017eaf2434da5d0603c44551.1920x1080.jpg')] bg-cover bg-center"></div>
+            <div class="relative z-10">
+                <h2 class="text-3xl font-bold mb-4">全面合成表 & 物品清单</h2>
+                <p class="text-gray-400 mb-8 max-w-2xl mx-auto">我们正在实时抓取游戏数据。首发版本将包含超过 200 种物品的合成公式、获取路径及最优利用策略。</p>
+                <div class="inline-block bg-blue-600 px-8 py-3 rounded-lg font-bold">5月11日 15:00 同步更新</div>
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-gray-50 border-t border-gray-200 py-12">
+    <footer class="bg-gray-50 border-t border-gray-200 py-12 mt-12">
         <div class="max-w-7xl mx-auto px-4 text-center text-gray-500">
+            <p class="mb-2 font-semibold">Outbound Guide - 最专业的拾光旅人玩家社区</p>
             <p>&copy; 2026 OutboundGuide.org - 非官方攻略社区</p>
-            <p class="mt-2 text-sm text-gray-500">Outbound 是 Square Glade Games 的注册商标。本站与开发者无关。</p>
+            <p class="mt-4 text-xs text-gray-400">Outbound 是 Square Glade Games 的注册商标。本站所有图片素材归原作者所有，仅供学习交流使用。</p>
         </div>
     </footer>
 
