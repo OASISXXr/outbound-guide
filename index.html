@@ -14,16 +14,19 @@
   <nav class="bg-white/95 backdrop-blur sticky top-0 z-50 border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
       <a href="#top" class="font-black text-xl text-blue-600">OutboundGuide.org</a>
-      <div class="hidden lg:flex gap-6 text-sm font-semibold text-slate-700">
-        <a href="#start"><span class="en">Starter</span><span class="zh">开荒</span></a>
-        <a href="#systems"><span class="en">Systems</span><span class="zh">系统</span></a>
-        <a href="#crafting"><span class="en">Crafting</span><span class="zh">合成</span></a>
-        <a href="#multiplayer"><span class="en">Co-op</span><span class="zh">联机</span></a>
+      <div class="hidden lg:flex gap-5 text-sm font-semibold text-slate-700">
+        <a href="/en/starter-guide.html"><span class="en">Starter</span><span class="zh">开荒</span></a>
+        <a href="/en/crafting.html"><span class="en">Crafting</span><span class="zh">合成</span></a>
+        <a href="/en/multiplayer.html"><span class="en">Co-op</span><span class="zh">联机</span></a>
+        <a href="/en/energy.html"><span class="en">Energy</span><span class="zh">能源</span></a>
+        <a href="/en/van-upgrades.html"><span class="en">Van</span><span class="zh">房车</span></a>
+        <a href="/en/system-requirements.html"><span class="en">PC</span><span class="zh">配置</span></a>
         <a href="#faq">FAQ</a>
       </div>
       <div class="flex items-center gap-2 bg-slate-100 p-1 rounded-xl">
         <button id="btn-en" onclick="setLang('en')" class="px-3 py-1.5 rounded-lg bg-white shadow text-blue-600 font-bold text-sm">EN</button>
         <button id="btn-zh" onclick="setLang('zh')" class="px-3 py-1.5 rounded-lg text-slate-500 font-bold text-sm">中文</button>
+        <a href="/zh/starter-guide.html" class="px-2 py-1 text-[11px] text-slate-500 hover:text-blue-600 border-l border-slate-300 ml-1 pl-2">中文站</a>
       </div>
     </div>
   </nav>
@@ -92,6 +95,32 @@
   </main>
 
   <footer class="bg-slate-950 text-slate-300 py-12 mt-16"><div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-6 justify-between"><div><div class="font-black text-white text-xl mb-2">OutboundGuide.org</div><p class="max-w-2xl"><span class="en">Non-official fan guide. Outbound is a trademark of Square Glade Games. Images and game information are used for community guide purposes.</span><span class="zh">非官方玩家攻略站。Outbound 为 Square Glade Games 商标。图片与游戏信息仅用于玩家攻略与资料整理。</span></p></div><div class="text-sm"><a class="underline" href="https://store.steampowered.com/app/2681030/Outbound/" target="_blank">Steam</a> · <a class="underline" href="https://www.squareglade.games" target="_blank">Developer</a></div></div></footer>
+
+  <script>
+    function setLang(lang){const b=document.getElementById('bodyTag'),en=document.getElementById('btn-en'),zh=document.getElementById('btn-zh'); if(lang==='zh'){b.className='lang-zh';zh.className='px-3 py-1.5 rounded-lg bg-white shadow text-blue-600 font-bold text-sm';en.className='px-3 py-1.5 rounded-lg text-slate-500 font-bold text-sm'}else{b.className='lang-en';en.className='px-3 py-1.5 rounded-lg bg-white shadow text-blue-600 font-bold text-sm';zh.className='px-3 py-1.5 rounded-lg text-slate-500 font-bold text-sm'} localStorage.setItem('lang',lang)}; setLang(localStorage.getItem('lang')||'en');
+  </script>
+</body>
+</html>
+�片与游戏信息仅用于玩家攻略与资料整理。</span></p></div><div class="text-sm"><a class="underline" href="https://store.steampowered.com/app/2681030/Outbound/" target="_blank">Steam</a> · <a class="underline" href="https://www.squareglade.games" target="_blank">Developer</a></div></div></footer>
+
+  <script>
+    function setLang(lang){const b=document.getElementById('bodyTag'),en=document.getElementById('btn-en'),zh=document.getElementById('btn-zh'); if(lang==='zh'){b.className='lang-zh';zh.className='px-3 py-1.5 rounded-lg bg-white shadow text-blue-600 font-bold text-sm';en.className='px-3 py-1.5 rounded-lg text-slate-500 font-bold text-sm'}else{b.className='lang-en';en.className='px-3 py-1.5 rounded-lg bg-white shadow text-blue-600 font-bold text-sm';zh.className='px-3 py-1.5 rounded-lg text-slate-500 font-bold text-sm'} localStorage.setItem('lang',lang)}; setLang(localStorage.getItem('lang')||'en');
+  </script>
+</body>
+</html>
+ine">合成表</a> · <a href="/zh/multiplayer.html" class="text-blue-600 hover:underline">联机</a> · <a href="/zh/energy.html" class="text-blue-600 hover:underline">能源</a> · <a href="/zh/van-upgrades.html" class="text-blue-600 hover:underline">房车</a> · <a href="/zh/system-requirements.html" class="text-blue-600 hover:underline">配置</a></div>
+  </section>
+
+  <footer class="bg-slate-950 text-slate-300 py-12 mt-16"><div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-6 justify-between"><div><div class="font-black text-white text-xl mb-2">OutboundGuide.org</div><p class="max-w-2xl"><span class="en">Non-official fan guide. Outbound is a trademark of Square Glade Games. Images and game information are used for community guide purposes.</span><span class="zh">非官方玩家攻略站。Outbound 为 Square Glade Games 商标。图片与游戏信息仅用于玩家攻略与资料整理。</span></p>
+    <div class="mt-4 flex flex-wrap gap-4 text-sm"><a href="/en/about.html" class="hover:text-white">About</a><a href="/en/privacy.html" class="hover:text-white">Privacy</a><a href="/en/disclaimer.html" class="hover:text-white">Disclaimer</a><a href="/en/contact.html" class="hover:text-white">Contact</a><span class="text-slate-600">|</span><a href="/zh/about.html" class="hover:text-white">关于</a><a href="/zh/privacy.html" class="hover:text-white">隐私</a><a href="/zh/disclaimer.html" class="hover:text-white">免责</a><a href="/zh/contact.html" class="hover:text-white">联系</a></div>
+  </div><div class="text-sm"><a class="underline" href="https://store.steampowered.com/app/2681030/Outbound/" target="_blank">Steam</a> · <a class="underline" href="https://www.squareglade.games" target="_blank">Developer</a></div></div></footer>
+
+  <script>
+    function setLang(lang){const b=document.getElementById('bodyTag'),en=document.getElementById('btn-en'),zh=document.getElementById('btn-zh'); if(lang==='zh'){b.className='lang-zh';zh.className='px-3 py-1.5 rounded-lg bg-white shadow text-blue-600 font-bold text-sm';en.className='px-3 py-1.5 rounded-lg text-slate-500 font-bold text-sm'}else{b.className='lang-en';en.className='px-3 py-1.5 rounded-lg bg-white shadow text-blue-600 font-bold text-sm';zh.className='px-3 py-1.5 rounded-lg text-slate-500 font-bold text-sm'} localStorage.setItem('lang',lang)}; setLang(localStorage.getItem('lang')||'en');
+  </script>
+</body>
+</html>
+�片与游戏信息仅用于玩家攻略与资料整理。</span></p></div><div class="text-sm"><a class="underline" href="https://store.steampowered.com/app/2681030/Outbound/" target="_blank">Steam</a> · <a class="underline" href="https://www.squareglade.games" target="_blank">Developer</a></div></div></footer>
 
   <script>
     function setLang(lang){const b=document.getElementById('bodyTag'),en=document.getElementById('btn-en'),zh=document.getElementById('btn-zh'); if(lang==='zh'){b.className='lang-zh';zh.className='px-3 py-1.5 rounded-lg bg-white shadow text-blue-600 font-bold text-sm';en.className='px-3 py-1.5 rounded-lg text-slate-500 font-bold text-sm'}else{b.className='lang-en';en.className='px-3 py-1.5 rounded-lg bg-white shadow text-blue-600 font-bold text-sm';zh.className='px-3 py-1.5 rounded-lg text-slate-500 font-bold text-sm'} localStorage.setItem('lang',lang)}; setLang(localStorage.getItem('lang')||'en');

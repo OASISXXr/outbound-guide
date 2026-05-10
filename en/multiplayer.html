@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Outbound Multiplayer Guide - How Co-op Works (Up to 4 Players)</title>
+<meta name="description" content="Outbound multiplayer guide: how online co-op works for up to 4 players, role splits, hosting and joining, shared van management, and tips to avoid early-game wipe." />
+<link rel="canonical" href="https://outboundguide.org/en/multiplayer.html" />
+<link rel="alternate" hreflang="en" href="https://outboundguide.org/en/multiplayer.html" />
+<link rel="alternate" hreflang="zh" href="https://outboundguide.org/zh/multiplayer.html" />
+<link rel="alternate" hreflang="x-default" href="https://outboundguide.org/en/multiplayer.html" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXX');</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","XXXXXXXXXX");</script>
+<style>
+body{font-family:Inter,system-ui,sans-serif;background:#f7fafc;color:#0f172a}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:18px;box-shadow:0 8px 25px rgba(15,23,42,.06)}
+.adslot{background:repeating-linear-gradient(45deg,#f1f5f9,#f1f5f9 10px,#e2e8f0 10px,#e2e8f0 20px);border:1px dashed #94a3b8;color:#64748b;font-size:12px;text-align:center;padding:24px;border-radius:12px}
+</style>
+</head>
+<body>
+<nav class="bg-white sticky top-0 z-50 border-b border-slate-200">
+<div class="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
+<a href="/" class="font-black text-lg text-blue-600">OutboundGuide.org</a>
+<div class="hidden md:flex gap-5 text-sm font-semibold text-slate-700">
+<a href="/en/starter-guide.html">Starter</a>
+<a href="/en/crafting.html">Crafting</a>
+<a href="/en/multiplayer.html" class="text-blue-600">Co-op</a>
+<a href="/en/system-requirements.html">Specs</a>
+<a href="/en/energy.html">Energy</a>
+<a href="/en/van-upgrades.html">Van</a>
+</div>
+<div class="flex gap-2 text-xs"><a href="/en/multiplayer.html" class="font-bold text-blue-600">EN</a><span class="text-slate-300">|</span><a href="/zh/multiplayer.html" class="text-slate-500">中文</a></div>
+</div>
+</nav>
+
+<header class="bg-gradient-to-br from-purple-600 to-blue-600 text-white py-16">
+<div class="max-w-4xl mx-auto px-4">
+<div class="text-sm opacity-80 mb-3">Co-op Guide · Updated May 10, 2026</div>
+<h1 class="text-4xl md:text-5xl font-black mb-4">Outbound Multiplayer Guide</h1>
+<p class="text-lg opacity-90">Online co-op for up to 4 players: roles, hosting, shared van management, and the mistakes that ruin co-op runs.</p>
+</div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-10 space-y-10">
+
+<div class="adslot">[ Ad slot - top banner ]</div>
+
+<section class="card p-6">
+<h2 class="text-2xl font-black mb-4">What the official text confirms</h2>
+<ul class="list-disc pl-6 space-y-2 text-slate-700">
+<li>Online co-op for up to <b>4 players</b>.</li>
+<li>Solo play is also fully supported.</li>
+<li>Players share the same van/world during a session.</li>
+</ul>
+</section>
+
+<section class="card p-6">
+<h2 class="text-2xl font-black mb-4">Recommended Role Split</h2>
+<div class="grid md:grid-cols-3 gap-4">
+<div class="p-5 bg-slate-50 rounded-xl"><div class="font-black text-lg mb-2">Driver</div><p class="text-slate-700 text-sm">Plans the route between biomes, watches power and fuel, marks campsites.</p></div>
+<div class="p-5 bg-slate-50 rounded-xl"><div class="font-black text-lg mb-2">Builder</div><p class="text-slate-700 text-sm">Owns van layout: workstations, storage, cooking, sleeping. Avoids over-decoration early.</p></div>
+<div class="p-5 bg-slate-50 rounded-xl"><div class="font-black text-lg mb-2">Gatherer</div><p class="text-slate-700 text-sm">Runs ahead at each stop, collects nodes, flags rare resources for the team.</p></div>
+<div class="p-5 bg-slate-50 rounded-xl md:col-span-3"><div class="font-black text-lg mb-2">Cook / Caretaker (4-player only)</div><p class="text-slate-700 text-sm">Handles food, pet, comfort upgrades and morale. Most underrated role for long sessions.</p></div>
+</div>
+</section>
+
+<div class="adslot">[ Ad slot - in-article ]</div>
+
+<section class="card p-6">
+<h2 class="text-2xl font-black mb-4">Top Mistakes That Wreck Co-op Runs</h2>
+<ol class="list-decimal pl-6 space-y-2 text-slate-700">
+<li>Everyone crafts independently — duplicates, wastes shared materials.</li>
+<li>No agreed direction (power vs storage vs farming) → no module gets finished.</li>
+<li>Driver leaves before gatherers return → loot lost on the road.</li>
+<li>Building decoration before utility — looks great, kills van performance.</li>
+</ol>
+</section>
+
+<section class="card p-6">
+<h2 class="text-2xl font-black mb-4">Hosting & Joining FAQ</h2>
+<div class="space-y-3">
+<details class="p-4 bg-slate-50 rounded-xl"><summary class="font-bold cursor-pointer">Is the host required to stay online?</summary><p class="mt-2 text-slate-700 text-sm">Pending verification. Most session-based co-op games require the host. Will update post-launch.</p></details>
+<details class="p-4 bg-slate-50 rounded-xl"><summary class="font-bold cursor-pointer">Is there cross-platform play?</summary><p class="mt-2 text-slate-700 text-sm">Outbound is announced for PC. Cross-play details pending.</p></details>
+<details class="p-4 bg-slate-50 rounded-xl"><summary class="font-bold cursor-pointer">Can a friend join mid-session?</summary><p class="mt-2 text-slate-700 text-sm">Pending verification on launch day.</p></details>
+</div>
+</section>
+
+<section class="card p-6 bg-slate-50">
+<h2 class="text-xl font-black mb-3">Sources</h2>
+<ul class="list-disc pl-6 text-sm text-slate-600 space-y-1">
+<li>Steam store page for Outbound (AppID 2681030)</li>
+<li>Square Glade Games official website</li>
+</ul>
+<p class="text-xs text-slate-500 mt-3">OutboundGuide.org is a non-official fan guide and is not affiliated with Square Glade Games.</p>
+</section>
+
+<div class="adslot">[ Ad slot - bottom banner ]</div>
+
+</main>
+
+<footer class="bg-slate-950 text-slate-300 py-10 mt-10">
+<div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-4 justify-between text-sm">
+<div><div class="font-black text-white">OutboundGuide.org</div><div class="text-slate-400">Non-official fan guide. Outbound © Square Glade Games.</div></div>
+<div class="flex flex-wrap gap-4">
+<a href="/en/about.html" class="hover:text-white">About</a>
+<a href="/en/privacy.html" class="hover:text-white">Privacy</a>
+<a href="/en/disclaimer.html" class="hover:text-white">Disclaimer</a>
+<a href="/en/contact.html" class="hover:text-white">Contact</a>
+</div>
+</div>
+</footer>
+</body>
+</html>
